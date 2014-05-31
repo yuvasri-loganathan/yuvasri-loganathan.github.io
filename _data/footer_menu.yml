@@ -1,0 +1,8 @@
+- name: Stories
+  link: /stories/
+- name: Resources
+  link: /resources/
+- name: Resume
+  link: /resume/
+- name: Contact
+  link: /contact/

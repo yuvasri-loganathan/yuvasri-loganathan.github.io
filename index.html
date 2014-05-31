@@ -1,0 +1,70 @@
+---
+layout: default
+permalink: /
+description: This is my portfolio website.
+hero_height: is-fullheight
+---
+
+
+<div class="columns is-multiline is-mobile is-centered">
+
+    <div class="column is-2-desktop  is-4-tablet is-6-mobile">
+        <!--img src="/img/avatar.png" width="100%" alt="Who am I?"/-->
+    </div>
+
+    <div class="column is-6-desktop is-6-tablet is-12-mobile content">
+        <h2 class="has-text-centered">Who am I?</h2>
+        <p>Hi everyone, I'm Yuvasri Loganathan, a full-time product analyst specializing in SaaS products, committed to driving digitalization for businesses.</p>
+
+        <p>I find product development incredibly fulfilling.  I love using design thinking and creative problem-solving to address user needs.</p>
+
+        <p>My daily tasks involve:</p>
+        <ul>
+            <li> Building product roadmaps to chart the course for future development.</li>
+            <li> Conducting user research to understand the target audience deeply.</li>
+            <li> Ideating the product workflow, taking it from vision to design.</li>
+            <li> Writing product requirement documents (PRDs) to ensure clarity for development teams.</li>
+            <li> Collaborating across various departments, including developers, testers, designers, and even the digital marketing team.</li>
+        </ul>
+        <p>My expertise covers various tools  like Jira,Excel for tasks tracking,PowerPoint for presentations, and design tools like Miro and Figma to translate ideas into visuals.</p>
+        <p>This passion for collaboration led me to create Notion templates, specifically designed to help product managers achieve their OKRs (Objectives and Key Results) and streamline their daily tasks.
+            In addition to my day job, I write insightful content on product management on this platform and LinkedIn.</p>
+        <p>Check out my stories and templates to see how they can empower you to run your product management process effectively while keeping your product goals at the forefront.</p>
+    </div>
+</div>
+
+<section class="section">
+    <div class="columns is-multiline is-centered">
+        <div class="column is-12">
+            <div class="content">
+                <h2 class="has-text-centered">Latest Story</h2>
+            </div>
+        </div>
+        <div class="column is-12">
+            <section class="hero is-light">
+                <div class="hero-body">
+                    <div class="columns">
+                        {% assign stories = site.stories | reverse %}
+                        {% for item in stories limit:1 %}
+                        <div class="column is-4">
+                            <img src="{{ item.hero_image | replace: 'http:', 'https:' }}" alt="{{ item.title }}" />
+                        </div>
+                        <div class="column is-8 has-text-centered">
+                            <p class="title is-4">{{ item.title }}</p>
+                            <p class="subtitle is-6">Published: {{ item.date | date: "%b %-d, %Y" }}</p>
+                            <!--div class="content has-text-centered">
+                                <p>{{ item.excerpt }}</p>
+                            </div-->
+                            <div class="has-text-centered">
+                                <a href="{{ item.url }}" class="button is-info">Read Story</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+
